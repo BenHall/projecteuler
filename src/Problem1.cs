@@ -12,19 +12,15 @@ namespace src
 		public void Solve ()
 		{
 			int answer = 0;
-			var foundNumbers = new List<int>();
 			
 			
 			for (int i = 0; i < 1000; i++) {
 				if(i % 3 == 0 || i % 5 == 0)
-					foundNumbers.Add(i);
+				{
+					Console.WriteLine(i);
+					answer += i;
+				}
 			}
-			
-			foreach (var item in foundNumbers) {
-				Console.WriteLine(item);
-				answer += item;
-			}
-			
 			
 			Console.WriteLine(answer);
 		}
