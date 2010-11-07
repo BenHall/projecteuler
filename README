@@ -1,0 +1,3 @@
+To run the REPL, use the command:
+
+mono repl/csharp.exe eg.cs 
