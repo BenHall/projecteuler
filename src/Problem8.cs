@@ -38,23 +38,17 @@ namespace src
 			while ((index + 5) < target.Length) {
 				string digitsBeingTested = target.Substring(index, 5);
 							
-				int result = 0;
-				//for (int i = 1; i < digitsBeingTested.Length; i++) {
-				//	result += Convert.ToInt32(digitsBeingTested[i - 1]) * ;
-				//}
-				
 				int[] unsorted = new int[5];
 				for (int i = 0; i < digitsBeingTested.Length; i++) {
 					int digit = int.Parse(digitsBeingTested[i].ToString());
 					unsorted[i] = digit;
 				}
 				
-				
 				for (int i = 1; i < unsorted.Length; i++) {
 					int valueBeingSorted = unsorted[i];
 					int pos = i - 1;
 					
-					while ((pos >= 0) && (unsorted[pos] > valueBeingSorted)) {
+					while ((pos >= 0) && unsorted[pos] > valueBeingSorted) {
 						unsorted[pos + 1] = unsorted[pos];
 						pos--;
 					}
@@ -62,8 +56,8 @@ namespace src
 					unsorted[pos + 1] = valueBeingSorted;
 				}
 				
-				result = unsorted[4] * unsorted[3] * unsorted[2] * unsorted[1] * unsorted[0];
-				
+							
+				int result = unsorted[4] * unsorted[3] * unsorted[2] * unsorted[1] * unsorted[0];
 				
 				if(result > greatest)
 				{
