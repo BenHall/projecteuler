@@ -48,6 +48,7 @@
     <Compile Include="Problem9.cs" />
     <Compile Include="Problem11.cs" />
     <Compile Include="Problem12.cs" />
+    <Compile Include="Problem13.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
