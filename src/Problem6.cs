@@ -17,7 +17,21 @@ namespace src
 	{
 		public void Solve ()
 		{
+			int target = 100;
 			int answer = 0;	
+			
+			int sumOfSquares = 0;
+			int sum = 0;
+			
+			for (int i = 0; i <= target; i++) {
+				sumOfSquares += i * i;
+				sum += i;
+			}
+			
+			int squareOfSum = sum * sum;
+			
+			answer = squareOfSum - sumOfSquares;
+			
 			Console.WriteLine("Answer: " + answer);
 		}
 	}

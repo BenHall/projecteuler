@@ -44,7 +44,7 @@ namespace src
 	        }
 			
 			
-			for (int i = 0; i < isPrime.Length; i++) {  // Just return the actual prime numbers
+			for (int i = 0; i < isPrime.Length; i++) {  // Just return the actual pr
 				if(isPrime[i])
 					possibleValues.Add(i);
 			}
