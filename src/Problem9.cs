@@ -23,7 +23,7 @@ namespace src
 			{
 				for(int m = 1; m < max; m++) {
            			for(int n = 1; n < m; n++) {
-						//a = m²-n², b = 2mn, c = m² + n²
+						//a = m²-n², b = 2mn, c = m² + n² (Taken from http://en.wikipedia.org/wiki/Pythagorean_triple)
 						int a = m*m - n*n;
 						int b = 2*m*n;  
 						int c = m*m + n*n;
