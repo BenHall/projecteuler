@@ -15,8 +15,10 @@ namespace src
 			long answer = 0;
 			
 			long target = 13195;
+			long max = target / 2;
+			long largest = 0;
 			
-			List<long> primes = FindPrime(target);
+			List<long> primes = FindPrime(max);
 			
 			List<long> factors = new List<long>();
 			foreach (long item in primes) {
@@ -25,44 +27,39 @@ namespace src
 			}
 				
 			
-			long largest = 0;
 			foreach (long item in factors) {
 				if(item > largest)
 					largest = item;
 			}
-			
+	
 			answer = largest;
 			
-			
-			// Get list of all prime numbers
-			// For each, does it dive into 13195 by itself and 1.
-
-				
+						
 			Console.WriteLine("Answer: " + answer);
 		}
 		
 		public List<long> FindPrime(long target)
 		{
-			List<long> list = new List<long>();
+			List<long> primeNumbers = new List<long>();
 			
 			for(long i = 2; i < target; i++)
 			{
-			    bool divisible = false;
+			    bool isPrimeNumber = true;
 							
-			    foreach(long number in list)
+			    foreach(long number in primeNumbers)
 				{
 			        if(i % number == 0)
-			            divisible = true;
+			            isPrimeNumber = false;
 				}
 			
-			    if(divisible == false)
+			    if(isPrimeNumber)
 				{
-			        list.Add(i);
+			        primeNumbers.Add(i);
 				}
 			}
 			
 			
-			return list;
+			return primeNumbers;
 		}
 	}
 }
