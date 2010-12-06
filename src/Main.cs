@@ -7,7 +7,7 @@ namespace src
 		public static void Main (string[] args)
 		{
 			Console.WriteLine ("Hello World!");
-			new Problem9().Solve();
+			new Problem11().Solve();
 		}
 	}
 }
